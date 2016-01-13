@@ -26,6 +26,7 @@ public class Registry {
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
+        return item;
     }
 
     private void loadItems(){
