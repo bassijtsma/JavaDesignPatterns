@@ -5,4 +5,8 @@ package com.bastronaut.factorypattern;
  */
 public class Novel extends Book {
 
+    @Override
+    public void createBook() {
+        System.out.println("Creating a novel!");
+    }
 }
