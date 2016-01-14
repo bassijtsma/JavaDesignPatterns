@@ -5,11 +5,11 @@ package com.bastronaut.factorypattern;
  */
 public class BookFactory {
 
-    public static Book getBook(String booktype) {
+    public static Book getBook(BookType booktype) {
         switch (booktype) {
-            case "ComicBook" :
+            case COMICBOOK :
                 return new ComicBook();
-            case "Novel" :
+            case NOVEL :
                 return new Novel();
             default :
                 return null;
