@@ -33,22 +33,22 @@ public class LunchOrder {
             return new LunchOrder(this);
         }
 
-        public Builder bread(String bread) {
+        public Builder addBread(String bread) {
             this.bread = bread;
             return this;
         }
 
-        public Builder condiments(String condiments) {
+        public Builder addCondiments(String condiments) {
             this.condiments = condiments;
             return this;
         }
 
-        public Builder dressing(String dressing) {
+        public Builder addDressing(String dressing) {
             this.dressing = dressing;
             return this;
         }
 
-        public Builder meat(String meat) {
+        public Builder addMeat(String meat) {
             this.meat = meat;
             return this;
         }

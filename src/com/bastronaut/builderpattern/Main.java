@@ -6,12 +6,12 @@ package com.bastronaut.builderpattern;
 
 public class Main {
     public static void main(String[] args ) {
-        LunchOrder.Builder lunchBuilderPattern = new LunchOrder.Builder();
+        LunchOrder.Builder lunchOrderBuilder = new LunchOrder.Builder();
         // pattern allows to define as many/little fields as you'd like,
-        // in the order that you'd like (e.g. meat is not used).
-        lunchBuilderPattern.bread("wheat").dressing("Ketchup").condiments("cheese");
+        // in the order that you'd like (e.g. addMeat is not used).
+        lunchOrderBuilder.addBread("wheat").addDressing("Ketchup").addCondiments("cheese");
 
-        LunchOrder lunchOrder = lunchBuilderPattern.build();
+        LunchOrder lunchOrder = lunchOrderBuilder.build();
 
         System.out.println(lunchOrder.getBread());
         System.out.println(lunchOrder.getMeat());
