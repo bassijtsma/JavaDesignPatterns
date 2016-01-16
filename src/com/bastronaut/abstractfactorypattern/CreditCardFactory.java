@@ -5,6 +5,10 @@ package com.bastronaut.abstractfactorypattern;
  */
 public abstract class CreditCardFactory {
     public static CreditCardFactory getCreditCardFactory(int creditScore) {
-
+        if(creditScore < 650) {
+            return new MastercardFactory();
+        } else {
+            return new VisaFactory();
+        }
     }
 }
