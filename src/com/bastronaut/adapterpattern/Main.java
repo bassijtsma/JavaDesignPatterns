@@ -24,10 +24,19 @@ public class Main {
 
         List<Contact> contacts = new ArrayList<>();
 
+        Contact newContactInfo = new NewContactInfo("bas" , "bas@test.com", 25);
+        contacts.add(newContactInfo);
 
-        LegacyContactInfo legacyContactInfo = new LegacyContactInfo("bas" , "bas@test.com", 25);
 
-        LegacyContactInfoAdapter legacyAdapter = new LegacyContactInfoAdapter(legacyContactInfo);
+
+        LegacyContactInfo legacyContactInfo = new LegacyContactInfo("baslegacy" , "bas@testy.com", 26);
+
+        contacts.add(new LegacyContactInfoAdapter(legacyContactInfo));
+
+
+        System.out.println(newContactInfo.getClass());
+        System.out.println(new LegacyContactInfoAdapter(legacyContactInfo));
+        System.out.println(contacts);
 
 
     }
