@@ -12,4 +12,20 @@ package com.bastronaut.abstractfactorypattern;
 // Often created with composition instead of inheritance.
 // example: DocumentBuilderFactory from java api
 public class Main {
-}
+
+    public static void main(String[] args) {
+
+        CreditCardFactory abstractFactory = CreditCardFactory.getCreditCardFactory(800);
+
+        CreditCard visaCardGold = abstractFactory.getCreditCard(CardType.GOLD);
+        CreditCard visaCardPlatinum = abstractFactory.getCreditCard(CardType.PLATINUM);
+
+        System.out.println(visaCardGold.getClass());
+        System.out.println(visaCardPlatinum.getClass());
+
+
+
+
+        }
+    }
+

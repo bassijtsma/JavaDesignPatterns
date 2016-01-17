@@ -16,8 +16,5 @@ public class VisaFactory extends CreditCardFactory {
         return null;
     }
 
-    @Override
-    public Validator getValidator(CardType cardType) {
-        return new VisaValidator();
-    }
+
 }
