@@ -1,5 +1,8 @@
 package com.bastronaut.adapterpattern;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Bas on 17-1-2016.
  */
@@ -16,4 +19,16 @@ builds around. Adapter class in this case implements an interface
 
  */
 public class Main {
+
+    public static void main(String[] args) {
+
+        List<Contact> contacts = new ArrayList<>();
+
+
+        LegacyContactInfo legacyContactInfo = new LegacyContactInfo("bas" , "bas@test.com", 25);
+
+        LegacyContactInfoAdapter legacyAdapter = new LegacyContactInfoAdapter(legacyContactInfo);
+
+
+    }
 }
