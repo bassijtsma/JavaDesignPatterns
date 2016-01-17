@@ -15,15 +15,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        CreditCardFactory abstractFactory = CreditCardFactory.getCreditCardFactory(800);
+        CreditCardFactory richAbstractFactory = CreditCardFactory.getCreditCardFactory(10000);
 
-        CreditCard visaCardGold = abstractFactory.getCreditCard(CardType.GOLD);
-        CreditCard visaCardPlatinum = abstractFactory.getCreditCard(CardType.PLATINUM);
+        CreditCard richGoldCard = richAbstractFactory.getCreditCard(CardType.GOLD);
+        CreditCard richPlatinumCard = richAbstractFactory.getCreditCard(CardType.PLATINUM);
 
-        System.out.println(visaCardGold.getClass());
-        System.out.println(visaCardPlatinum.getClass());
+        System.out.println(richGoldCard.getClass());
+        System.out.println(richPlatinumCard.getClass());
 
+        CreditCardFactory poorAbstractFactory = CreditCardFactory.getCreditCardFactory(500);
 
+        CreditCard poorGoldCard = poorAbstractFactory.getCreditCard(CardType.GOLD);
+        CreditCard poorPlatinumdCard = poorAbstractFactory.getCreditCard(CardType.PLATINUM);
+
+        System.out.println(poorPlatinumdCard.getClass());
+        System.out.println(poorGoldCard.getClass());
 
 
         }
