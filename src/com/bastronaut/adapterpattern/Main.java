@@ -16,7 +16,8 @@ fields and methods that the adapter class (LegacyContactInfoAdapter)
 builds around. Adapter class in this case implements an interface
 (contact) to cover the newly required functionality.
 
-
+When you want to add functionality to the adapter, perhaps
+reconsider to go for the decorator pattern.
  */
 public class Main {
 
@@ -27,17 +28,13 @@ public class Main {
         Contact newContactInfo = new NewContactInfo("bas" , "bas@test.com", 25);
         contacts.add(newContactInfo);
 
-
-
         LegacyContactInfo legacyContactInfo = new LegacyContactInfo("baslegacy" , "bas@testy.com", 26);
 
         contacts.add(new LegacyContactInfoAdapter(legacyContactInfo));
 
-
         System.out.println(newContactInfo.getClass());
         System.out.println(new LegacyContactInfoAdapter(legacyContactInfo));
         System.out.println(contacts);
-
 
     }
 }
