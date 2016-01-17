@@ -3,22 +3,7 @@ package com.bastronaut.builderpattern;
 /**
  * Created by BSijtsma on 12-01-2016.
  */
-/*
-Solves common problem of determining what constructor to use.
-Oftentime multiple constructor (telescoping) becomes confusing.
-Often made with static inner class, as to return object its building
 
-How it works: create a static class Builder.
-Within this class, 'setter' methods are added named according
-to the respective fields.
-
-Can also enforce protection by removing all setter methods.
-
-When you want to instantiate a LunchOrder, you will first have
-to instantiate the LunchOrder.Builder() class. Then, you're free
-to define as many of the available fields as you'd like, then
-call the LunchOrder.build() method.
- */
 public class LunchOrder {
 
     public static class Builder {
