@@ -1,4 +1,4 @@
-package com.bastronaut.bridgedesignpattern;
+package com.bastronaut.bridgepattern;
 
 /**
  * Created by Bas on 17-1-2016.
